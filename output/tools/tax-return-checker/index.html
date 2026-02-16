@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>確定申告が必要？無料チェッカー【2025年版】</title>
+<meta name="description" content="あなたは確定申告が必要？10の質問に答えるだけで確定申告の要否をかんたん診断。副業・ふるさと納税・医療費控除など、あなたの状況に合わせて判定します。">
+<meta name="keywords" content="確定申告,必要,チェック,診断,副業,ふるさと納税,医療費控除,住宅ローン控除,フリーランス,年末調整">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ai-money-lab.github.io/benri-tools/tax-return-checker/">
+<!-- OGP -->
+<meta property="og:title" content="確定申告が必要？無料チェッカー【2025年版】">
+<meta property="og:description" content="10の質問に答えるだけで確定申告の要否をかんたん診断。副業・ふるさと納税・医療費控除など対応。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ai-money-lab.github.io/benri-tools/tax-return-checker/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="確定申告要否チェッカー">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="確定申告が必要？無料チェッカー【2025年版】">
+<meta name="twitter:description" content="10の質問に答えるだけで確定申告の要否をかんたん診断。副業・ふるさと納税・医療費控除など対応。">
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', Meiryo, sans-serif;
+  background: #f5f7f5;
+  color: #333;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a6b3c 0%, #2e7d32 50%, #43a047 100%);
+  color: #fff;
+  padding: 32px 16px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.header h1 {
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  position: relative;
+}
+.header p {
+  font-size: clamp(0.82rem, 2.5vw, 1rem);
+  opacity: 0.9;
+  position: relative;
+}
+
+/* Container */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 12px 40px;
+}
+
+/* Progress Bar */
+.progress-area {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(26,107,60,0.08);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1a6b3c;
+}
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #e8f5e9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+/* Question Card */
+.question-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(26,107,60,0.10), 0 1px 4px rgba(0,0,0,0.05);
+  padding: 32px 24px;
+  margin-bottom: 20px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.question-card.slide-out-left {
+  animation: slideOutLeft 0.3s ease forwards;
+}
+.question-card.slide-in-right {
+  animation: slideInRight 0.3s ease forwards;
+}
+
+@keyframes slideOutLeft {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-60px); opacity: 0; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.question-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #1a6b3c, #2e7d32);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.question-text {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.question-hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: 2px solid #c8e6c9;
+  background: #fff;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:hover {
+  background: #e8f5e9;
+  border-color: #2e7d32;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46,125,50,0.15);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn.selected {
+  background: #2e7d32;
+  color: #fff;
+  border-color: #2e7d32;
+}
+
+/* Back button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+}
+.back-btn:hover {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.back-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Result */
+.result-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(26,107,60,0.12);
+  padding: 32px 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeInUp 0.5s ease;
+}
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.result-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+.result-title {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.result-title.required { color: #c62828; }
+.result-title.recommended { color: #e65100; }
+.result-title.not-required { color: #2e7d32; }
+
+.result-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* Reasons */
+.reasons-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(26,107,60,0.10);
+  padding: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+  animation: fadeInUp 0.5s ease 0.15s both;
+}
+.reasons-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a6b3c;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e8f5e9;
+}
+.reason-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f8e9;
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+.reason-item:last-child {
+  border-bottom: none;
+}
+.reason-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.reason-icon.required {
+  background: #ffebee;
+  color: #c62828;
+}
+.reason-icon.recommended {
+  background: #fff3e0;
+  color: #e65100;
+}
+.reason-icon.info {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* CTA */
+.cta-card {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+  animation: fadeInUp 0.5s ease 0.3s both;
+}
+.cta-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a6b3c;
+  margin-bottom: 12px;
+}
+.cta-link {
+  display: block;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(46,125,50,0.25);
+}
+.cta-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(46,125,50,0.35);
+}
+.cta-link:last-child {
+  margin-bottom: 0;
+}
+.cta-link .cta-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  color: #6d4c00;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease 0.4s both;
+}
+
+/* Restart */
+.restart-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #fff;
+  border: 2px solid #2e7d32;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: fadeInUp 0.5s ease 0.45s both;
+}
+.restart-btn:hover {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 0.78rem;
+  color: #999;
+}
+.footer a {
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+/* Start screen */
+.start-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(26,107,60,0.10);
+  padding: 32px 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.start-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a6b3c;
+  margin-bottom: 16px;
+}
+.start-features {
+  text-align: left;
+  margin: 0 auto 24px;
+  max-width: 400px;
+}
+.start-features li {
+  list-style: none;
+  padding: 8px 0;
+  font-size: 0.93rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.start-features li::before {
+  content: '\2713';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.start-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  background: linear-gradient(135deg, #1a6b3c, #2e7d32);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 16px rgba(26,107,60,0.3);
+}
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26,107,60,0.4);
+}
+
+/* Hidden */
+.hidden {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .header { padding: 24px 12px 20px; }
+  .question-card { padding: 24px 16px; min-height: 240px; }
+  .result-card { padding: 24px 16px; }
+  .reasons-card { padding: 20px 16px; }
+  .cta-card { padding: 20px 16px; }
+  .container { padding: 12px 8px 32px; }
+}
+
+@media (min-width: 768px) {
+  .btn-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .btn {
+    flex: 1;
+    min-width: 140px;
+  }
+}
+</style>
+<style>.related-tools{background:#f8f9fa;border-radius:12px;padding:20px;margin:20px 0}.related-tools h3{font-size:1rem;color:#1a2744;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #667eea}.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}.related-link{display:block;padding:10px 14px;background:#fff;border-radius:8px;text-decoration:none;color:#333;font-size:.9rem;font-weight:500;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:transform .15s,box-shadow .15s}.related-link:hover{transform:translateY(-1px);box-shadow:0 3px 8px rgba(102,126,234,.2);color:#667eea}</style>
+</head>
+<body>
+
+<header class="header">
+  <h1>確定申告 要否チェッカー</h1>
+  <p>10の質問に答えるだけで、確定申告が必要かすぐ分かる</p>
+</header>
+
+<div class="container">
+  <!-- Start Screen -->
+  <div id="startScreen" class="start-card">
+    <h2>あなたは確定申告が必要ですか?</h2>
+    <ul class="start-features">
+      <li>かんたん10問の質問に回答</li>
+      <li>副業・ふるさと納税・医療費控除に対応</li>
+      <li>該当する理由もわかりやすく表示</li>
+      <li>完全無料・登録不要</li>
+    </ul>
+    <button class="start-btn" onclick="startQuiz()">診断スタート</button>
+  </div>
+
+  <!-- Progress -->
+  <div id="progressArea" class="progress-area hidden">
+    <div class="progress-label">
+      <span id="progressText">質問 1 / 10</span>
+      <span id="progressPercent">0%</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div id="progressFill" class="progress-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- Question Area -->
+  <div id="questionArea" class="hidden">
+    <button id="backBtn" class="back-btn" onclick="goBack()" disabled>
+      ← 前の質問
+    </button>
+    <div id="questionCard" class="question-card">
+      <div id="questionNumber" class="question-number">1</div>
+      <div id="questionText" class="question-text"></div>
+      <div id="questionHint" class="question-hint"></div>
+      <div id="btnGroup" class="btn-group"></div>
+    </div>
+  </div>
+
+  <!-- Result Area -->
+  <div id="resultArea" class="hidden"></div>
+</div>
+
+
+  <div class="related-tools">
+    <h3>関連ツール</h3>
+    <div class="related-grid">
+    <a href="https://ai-money-lab.github.io/benri-tools/tax-calculator/" class="related-link">副業税金シミュレーター</a>
+    <a href="https://ai-money-lab.github.io/benri-tools/furusato-tax/" class="related-link">ふるさと納税上限額計算機</a>
+    <a href="https://ai-money-lab.github.io/benri-tools/salary-calculator/" class="related-link">年収手取り計算機</a>
+    <a href="https://ai-money-lab.github.io/benri-tools/nisa-simulator/" class="related-link">積立NISAシミュレーター</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+  &copy; 2025 確定申告要否チェッカー
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // Questions definition
+  var questions = [
+    {
+      id: 'nenmatsu',
+      text: '会社員で年末調整を受けましたか?',
+      hint: '勤務先で源泉徴収票をもらっている場合は「はい」',
+      options: [
+        { label: 'はい', value: 'yes' },
+        { label: 'いいえ', value: 'no' }
+      ]
+    },
+    {
+      id: 'fukugyo',
+      text: '副業・フリーランスの所得がありますか?',
+      hint: '所得 = 収入 - 必要経費 です',
+      options: [
+        { label: 'ない', value: 'none' },
+        { label: 'ある（20万円以下）', value: 'under20' },
+        { label: 'ある（20万円超）', value: 'over20' }
+      ]
+    },
+    {
+      id: 'salary_over2000',
+      text: '給与収入は2,000万円を超えていますか?',
+      hint: '給与の総額（手取りではなく額面）で判断',
+      options: [
+        { label: 'はい', value: 'yes' },
+        { label: 'いいえ', value: 'no' }
+      ]
+    },
+    {
+      id: 'medical',
+      text: '年間の医療費が10万円を超えましたか?',
+      hint: '家族全員分の合計。セルフメディケーション税制（1.2万円超）も含む',
+      options: [
+        { label: 'はい', value: 'yes' },
+        { label: 'いいえ', value: 'no' }
+      ]
+    },
+    {
+      id: 'furusato',
+      text: 'ふるさと納税をしましたか?',
+      hint: 'ワンストップ特例申請を出していれば確定申告不要の場合があります',
+      options: [
+        { label: 'していない', value: 'none' },
+        { label: 'ワンストップ特例申請済み', value: 'onestop' },
+        { label: 'ワンストップ未申請', value: 'no_onestop' }
+      ]
+    },
+    {
+      id: 'housing_loan',
+      text: '住宅ローン控除を初めて受けますか?（1年目）',
+      hint: '2年目以降は年末調整で対応可能です',
+      options: [
+        { label: 'はい（1年目）', value: 'yes' },
+        { label: 'いいえ', value: 'no' }
+      ]
+    },
+    {
+      id: 'stock',
+      text: '株式の譲渡益・配当がありますか?',
+      hint: '特定口座（源泉徴収あり）の場合は原則不要です',
+      options: [
+        { label: 'ない', value: 'none' },
+        { label: '特定口座（源泉徴収あり）', value: 'tokutei' },
+        { label: '一般口座・源泉徴収なし', value: 'ippan' }
+      ]
+    },
+    {
+      id: 'realestate',
+      text: '不動産収入がありますか?',
+      hint: '家賃収入・駐車場収入など',
+      options: [
+        { label: 'はい', value: 'yes' },
+        { label: 'いいえ', value: 'no' }
+      ]
+    },
+    {
+      id: 'retirement',
+      text: '退職金を受け取りましたか?',
+      hint: '「退職所得の受給に関する申告書」を勤務先に提出していない場合が対象',
+      options: [
+        { label: '受け取っていない', value: 'none' },
+        { label: '受け取った（申告書提出済み）', value: 'submitted' },
+        { label: '受け取った（申告書未提出）', value: 'not_submitted' }
+      ]
+    },
+    {
+      id: 'crypto',
+      text: '雑所得（仮想通貨など）が20万円を超えましたか?',
+      hint: '暗号資産の売却益、FX、アフィリエイト収入など',
+      options: [
+        { label: 'はい（20万円超）', value: 'yes' },
+        { label: 'いいえ', value: 'no' }
+      ]
+    }
+  ];
+
+  var currentStep = 0;
+  var answers = {};
+  var totalQuestions = questions.length;
+
+  // DOM
+  var startScreen = document.getElementById('startScreen');
+  var progressArea = document.getElementById('progressArea');
+  var questionArea = document.getElementById('questionArea');
+  var resultArea = document.getElementById('resultArea');
+  var progressText = document.getElementById('progressText');
+  var progressPercent = document.getElementById('progressPercent');
+  var progressFill = document.getElementById('progressFill');
+  var questionCard = document.getElementById('questionCard');
+  var questionNumber = document.getElementById('questionNumber');
+  var questionText = document.getElementById('questionText');
+  var questionHint = document.getElementById('questionHint');
+  var btnGroup = document.getElementById('btnGroup');
+  var backBtn = document.getElementById('backBtn');
+
+  window.startQuiz = function() {
+    startScreen.classList.add('hidden');
+    progressArea.classList.remove('hidden');
+    questionArea.classList.remove('hidden');
+    currentStep = 0;
+    answers = {};
+    renderQuestion();
+  };
+
+  function renderQuestion() {
+    var q = questions[currentStep];
+    var pct = Math.round((currentStep / totalQuestions) * 100);
+
+    progressText.textContent = '\u8CEA\u554F ' + (currentStep + 1) + ' / ' + totalQuestions;
+    progressPercent.textContent = pct + '%';
+    progressFill.style.width = pct + '%';
+
+    questionNumber.textContent = currentStep + 1;
+    questionText.textContent = q.text;
+    questionHint.textContent = q.hint;
+
+    backBtn.disabled = (currentStep === 0);
+
+    btnGroup.innerHTML = '';
+    q.options.forEach(function(opt) {
+      var btn = document.createElement('button');
+      btn.className = 'btn';
+      btn.textContent = opt.label;
+      if (answers[q.id] === opt.value) {
+        btn.classList.add('selected');
+      }
+      btn.addEventListener('click', function() {
+        selectAnswer(q.id, opt.value);
+      });
+      btnGroup.appendChild(btn);
+    });
+  }
+
+  function selectAnswer(qId, value) {
+    answers[qId] = value;
+
+    // Highlight selected
+    var btns = btnGroup.querySelectorAll('.btn');
+    btns.forEach(function(b) { b.classList.remove('selected'); });
+    event.currentTarget.classList.add('selected');
+
+    // Animate and go next
+    setTimeout(function() {
+      if (currentStep < totalQuestions - 1) {
+        questionCard.classList.add('slide-out-left');
+        setTimeout(function() {
+          currentStep++;
+          renderQuestion();
+          questionCard.classList.remove('slide-out-left');
+          questionCard.classList.add('slide-in-right');
+          setTimeout(function() {
+            questionCard.classList.remove('slide-in-right');
+          }, 300);
+        }, 280);
+      } else {
+        showResult();
+      }
+    }, 200);
+  }
+
+  window.goBack = function() {
+    if (currentStep > 0) {
+      currentStep--;
+      renderQuestion();
+    }
+  };
+
+  function evaluate() {
+    var required = [];
+    var recommended = [];
+
+    // 1. 年末調整を受けていない
+    if (answers.nenmatsu === 'no') {
+      required.push('年末調整を受けていないため、確定申告で所得税を精算する必要があります');
+    }
+
+    // 2. 副業所得 > 20万円
+    if (answers.fukugyo === 'over20') {
+      required.push('副業・フリーランスの所得が20万円を超えているため、確定申告が必要です');
+    }
+
+    // 2b. 副業所得 <= 20万円
+    if (answers.fukugyo === 'under20') {
+      recommended.push('副業所得が20万円以下の場合、所得税の確定申告は不要ですが、住民税の申告は必要です');
+    }
+
+    // 3. 給与 > 2,000万円
+    if (answers.salary_over2000 === 'yes') {
+      required.push('給与収入が2,000万円を超えているため、年末調整の対象外で確定申告が必要です');
+    }
+
+    // 4. 医療費 > 10万円
+    if (answers.medical === 'yes') {
+      recommended.push('医療費控除を申請することで、税金が還付される可能性があります');
+    }
+
+    // 5. ふるさと納税ワンストップ未申請
+    if (answers.furusato === 'no_onestop') {
+      required.push('ふるさと納税のワンストップ特例を申請していないため、確定申告で寄附金控除を申請する必要があります');
+    }
+
+    // 6. 住宅ローン控除1年目
+    if (answers.housing_loan === 'yes') {
+      required.push('住宅ローン控除の1年目は、確定申告での手続きが必要です');
+    }
+
+    // 7. 一般口座・源泉なし
+    if (answers.stock === 'ippan') {
+      required.push('一般口座や源泉徴収なしの特定口座での株式益は、確定申告が必要です');
+    }
+
+    // 8. 不動産収入
+    if (answers.realestate === 'yes') {
+      required.push('不動産収入（家賃収入等）がある場合、確定申告が必要です');
+    }
+
+    // 9. 退職所得申告書未提出
+    if (answers.retirement === 'not_submitted') {
+      required.push('退職所得の受給に関する申告書を提出していない場合、確定申告で精算する必要があります');
+    }
+
+    // 10. 雑所得 > 20万円
+    if (answers.crypto === 'yes') {
+      required.push('雑所得（仮想通貨等）が20万円を超えているため、確定申告が必要です');
+    }
+
+    return { required: required, recommended: recommended };
+  }
+
+  function showResult() {
+    progressArea.classList.add('hidden');
+    questionArea.classList.add('hidden');
+
+    var result = evaluate();
+    var html = '';
+
+    // Determine result level
+    var level, icon, title, subtitle, titleClass;
+
+    if (result.required.length > 0) {
+      level = 'required';
+      icon = '\uD83D\uDD34';
+      title = '\u78BA\u5B9A\u7533\u544A\u304C\u300C\u5FC5\u8981\u300D\u3067\u3059';
+      subtitle = '\u8A72\u5F53\u3059\u308B\u7406\u7531\u304C ' + result.required.length + ' \u4EF6\u898B\u3064\u304B\u308A\u307E\u3057\u305F';
+      titleClass = 'required';
+    } else if (result.recommended.length > 0) {
+      level = 'recommended';
+      icon = '\uD83D\uDFE1';
+      title = '\u78BA\u5B9A\u7533\u544A\u3057\u305F\u307B\u3046\u304C\u300C\u304A\u5F97\u300D\u3067\u3059';
+      subtitle = '\u7A0E\u91D1\u304C\u9084\u4ED8\u3055\u308C\u308B\u53EF\u80FD\u6027\u304C\u3042\u308A\u307E\u3059';
+      titleClass = 'recommended';
+    } else {
+      level = 'not-required';
+      icon = '\uD83D\uDFE2';
+      title = '\u78BA\u5B9A\u7533\u544A\u306F\u300C\u4E0D\u8981\u300D\u306E\u53EF\u80FD\u6027\u304C\u9AD8\u3044\u3067\u3059';
+      subtitle = '\u73FE\u6642\u70B9\u3067\u306F\u78BA\u5B9A\u7533\u544A\u304C\u4E0D\u8981\u3068\u601D\u308F\u308C\u307E\u3059';
+      titleClass = 'not-required';
+    }
+
+    // Result card
+    html += '<div class="result-card">';
+    html += '<div class="result-icon">' + icon + '</div>';
+    html += '<div class="result-title ' + titleClass + '">' + title + '</div>';
+    html += '<div class="result-subtitle">' + subtitle + '</div>';
+    html += '</div>';
+
+    // Reasons card
+    if (result.required.length > 0 || result.recommended.length > 0) {
+      html += '<div class="reasons-card">';
+      html += '<div class="reasons-title">該当する理由</div>';
+
+      result.required.forEach(function(r) {
+        html += '<div class="reason-item">';
+        html += '<div class="reason-icon required">!</div>';
+        html += '<div>' + r + '</div>';
+        html += '</div>';
+      });
+
+      result.recommended.forEach(function(r) {
+        html += '<div class="reason-item">';
+        html += '<div class="reason-icon recommended">$</div>';
+        html += '<div>' + r + '</div>';
+        html += '</div>';
+      });
+
+      html += '</div>';
+    } else {
+      // No reasons - show reassurance
+      html += '<div class="reasons-card">';
+      html += '<div class="reasons-title">診断結果の詳細</div>';
+      html += '<div class="reason-item">';
+      html += '<div class="reason-icon info">\u2713</div>';
+      html += '<div>\u5E74\u672B\u8ABF\u6574\u6E08\u307F\u3067\u3001\u78BA\u5B9A\u7533\u544A\u304C\u5FC5\u8981\u3068\u306A\u308B\u6761\u4EF6\u306B\u8A72\u5F53\u3057\u307E\u305B\u3093\u3067\u3057\u305F</div>';
+      html += '</div>';
+      html += '</div>';
+    }
+
+    // CTA
+    html += '<div class="cta-card">';
+    html += '<h3>確定申告をスムーズに進めるなら</h3>';
+    html += '<a href="https://px.a8.net/svt/ejp?a8mat=3N3VF4+834ZLE+4JGQ+BXB8Z" class="cta-link" target="_blank" rel="nofollow noopener">';
+    html += '\u78BA\u5B9A\u7533\u544A\u3092\u304B\u3093\u305F\u3093\u306B\u3010\u30DE\u30CD\u30FC\u30D5\u30A9\u30EF\u30FC\u30C9 \u30AF\u30E9\u30A6\u30C9\u3011';
+    html += '<span class="cta-sub">\u30AF\u30E9\u30A6\u30C9\u4F1A\u8A08\u30BD\u30D5\u30C8\u3067\u81EA\u52D5\u4ED5\u8A33\u30FB\u304B\u3093\u305F\u3093\u63D0\u51FA</span>';
+    html += '</a>';
+    html += '<a href="https://px.a8.net/svt/ejp?a8mat=3N44TO+97114I+47L8+5ZU29" class="cta-link" target="_blank" rel="nofollow noopener">';
+    html += '\u30D5\u30EA\u30FC\u30E9\u30F3\u30B9\u306E\u304A\u91D1\u306E\u4E0D\u5B89\u3092\u89E3\u6D88\u3010FREENANCE\u3011';
+    html += '<span class="cta-sub">\u8ACB\u6C42\u66F8\u8CB7\u53D6\u30FB\u640D\u5BB3\u4FDD\u967A\u30FB\u78BA\u5B9A\u7533\u544A\u30B5\u30DD\u30FC\u30C8</span>';
+    html += '</a>';
+    html += '</div>';
+
+    // Disclaimer
+    html += '<div class="disclaimer">';
+    html += '\u203B \u3053\u306E\u8A3A\u65AD\u306F\u4E00\u822C\u7684\u306A\u57FA\u6E96\u306B\u57FA\u3065\u304F\u76EE\u5B89\u3067\u3059\u3002\u500B\u5225\u306E\u4E8B\u60C5\u306B\u3088\u308A\u7570\u306A\u308B\u5834\u5408\u304C\u3042\u308A\u307E\u3059\u3002\u6B63\u78BA\u306A\u5224\u65AD\u306F\u7A0E\u52D9\u7F72\u307E\u305F\u306F\u7A0E\u7406\u58EB\u306B\u3054\u76F8\u8AC7\u304F\u3060\u3055\u3044\u3002';
+    html += '</div>';
+
+    // Restart button
+    html += '<button class="restart-btn" onclick="restartQuiz()">\u3082\u3046\u4E00\u5EA6\u8A3A\u65AD\u3059\u308B</button>';
+
+    resultArea.innerHTML = html;
+    resultArea.classList.remove('hidden');
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.restartQuiz = function() {
+    resultArea.classList.add('hidden');
+    resultArea.innerHTML = '';
+    startScreen.classList.remove('hidden');
+    currentStep = 0;
+    answers = {};
+  };
+
+})();
+</script>
+</body>
+</html>

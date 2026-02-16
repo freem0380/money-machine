@@ -86,6 +86,46 @@
     "official_url": "https://www.renosy.com/",
     "url": "https://www.renosy.com/"
   },
+  "dmm_fx": {
+    "name": "DMM FX",
+    "asp": "A8.net",
+    "reward": "55,000円",
+    "official_url": "https://fx.dmm.com/",
+    "url": "https://px.a8.net/svt/ejp?a8mat=35HUXC+4EDES2+1WP2+6DZBL",
+    "a8_link": "https://px.a8.net/svt/ejp?a8mat=35HUXC+4EDES2+1WP2+6DZBL"
+  },
+  "family_koubou": {
+    "name": "ファミリー工房",
+    "asp": "A8.net",
+    "reward": "30,000円",
+    "official_url": "https://www.family-koubou.jp/",
+    "url": "https://px.a8.net/svt/ejp?a8mat=45E59Y+3FU9OY+5MNK+5YJRM",
+    "a8_link": "https://px.a8.net/svt/ejp?a8mat=45E59Y+3FU9OY+5MNK+5YJRM"
+  },
+  "hapisumu": {
+    "name": "ハピすむ",
+    "asp": "A8.net",
+    "reward": "10,000円",
+    "official_url": "https://www.hapisumu.jp/",
+    "url": "https://px.a8.net/svt/ejp?a8mat=45E59Y+3BO8GI+9MO+3N0FO1",
+    "a8_link": "https://px.a8.net/svt/ejp?a8mat=45E59Y+3BO8GI+9MO+3N0FO1"
+  },
+  "reshop_navi": {
+    "name": "リショップナビ",
+    "asp": "A8.net",
+    "reward": "10,000円",
+    "official_url": "https://www.reshopnavi.com/",
+    "url": "https://px.a8.net/svt/ejp?a8mat=45E59Y+3I8042+2W92+60OXE",
+    "a8_link": "https://px.a8.net/svt/ejp?a8mat=45E59Y+3I8042+2W92+60OXE"
+  },
+  "freenance": {
+    "name": "FREENANCE",
+    "asp": "A8.net",
+    "reward": "3,000円",
+    "official_url": "https://freenance.net/",
+    "url": "https://px.a8.net/svt/ejp?a8mat=3N44TO+97114I+47L8+5ZU29",
+    "a8_link": "https://px.a8.net/svt/ejp?a8mat=3N44TO+97114I+47L8+5ZU29"
+  },
   "sim_povo": {
     "name": "povo",
     "official_url": "https://povo.jp/",

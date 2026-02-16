@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-money-lab.github.io/benri-tools/sitemap.xml

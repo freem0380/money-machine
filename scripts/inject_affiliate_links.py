@@ -23,7 +23,7 @@ TOOLS_DIR = os.path.join(BASE_DIR, 'output', 'tools')
 TOOL_LINK_MAP = {
     'salary-calculator': [
         {'match': 'LHH転職エージェント', 'key': 'lhh_agent'},
-        {'match': 'ピタテン', 'key': 'pitaten'},
+        {'match': 'FREENANCE', 'key': 'freenance'},
     ],
     'unemployment-benefit': [
         {'match': 'ピタテン', 'key': 'pitaten'},
@@ -35,15 +35,15 @@ TOOL_LINK_MAP = {
     ],
     'investment-return': [
         {'match': 'SBI証券', 'key': 'sbi_securities'},
-        {'match': 'マネードクター', 'key': 'money_doctor'},
+        {'match': 'DMM FX', 'key': 'dmm_fx'},
     ],
     'loan-calculator': [
         {'match': 'モゲチェック', 'key': 'mogecheck'},
-        {'match': '保険スクエア', 'key': 'hoken_square_bang'},
+        {'match': 'ファミリー工房', 'key': 'family_koubou'},
     ],
     'dividend-yield': [
         {'match': 'SBI証券', 'key': 'sbi_securities'},
-        {'match': 'マネードクター', 'key': 'money_doctor'},
+        {'match': 'DMM FX', 'key': 'dmm_fx'},
     ],
     'pension-calculator': [
         {'match': 'マネードクター', 'key': 'money_doctor'},
@@ -51,7 +51,11 @@ TOOL_LINK_MAP = {
     ],
     'nisa-simulator': [
         {'match': 'SBI証券', 'key': 'sbi_securities'},
-        {'match': 'WealthNavi', 'key': 'wealthnavi'},
+        {'match': 'DMM FX', 'key': 'dmm_fx'},
+    ],
+    'compound-interest': [
+        {'match': 'SBI証券', 'key': 'sbi_securities'},
+        {'match': 'DMM FX', 'key': 'dmm_fx'},
     ],
     'retirement-calculator': [
         {'match': 'マネードクター', 'key': 'money_doctor'},
@@ -63,11 +67,15 @@ TOOL_LINK_MAP = {
     ],
     'tax-calculator': [
         {'match': 'マネーフォワード', 'key': 'money_forward'},
-        {'match': '税理士ドットコム', 'key': 'zeirishi_dot_com'},
+        {'match': 'FREENANCE', 'key': 'freenance'},
     ],
     'real-estate-yield': [
-        {'match': 'RENOSY', 'key': 'renosy'},
-        {'match': 'マネードクター', 'key': 'money_doctor'},
+        {'match': 'リショップナビ', 'key': 'reshop_navi'},
+        {'match': 'ハピすむ', 'key': 'hapisumu'},
+    ],
+    'rent-vs-buy': [
+        {'match': 'モゲチェック', 'key': 'mogecheck'},
+        {'match': 'ファミリー工房', 'key': 'family_koubou'},
     ],
 }
 
