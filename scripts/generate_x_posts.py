@@ -10,7 +10,7 @@ OUTPUT_DIR = os.path.join(BASE_DIR, 'output', 'social')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # GitHub Pages URL
-SITE_URL = 'https://freem0380.github.io/money-machine'
+SITE_URL = 'https://freem0380.github.io/benri-tools'
 
 TOOL_POSTS = {
     'sim-comparison': {

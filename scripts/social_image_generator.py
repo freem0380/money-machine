@@ -25,7 +25,7 @@ from PIL import Image, ImageDraw, ImageFont
 BASE_DIR = Path(__file__).resolve().parent.parent
 DB_PATH = BASE_DIR / "data" / "money_machine.db"
 OUTPUT_DIR = BASE_DIR / "output" / "social"
-SITE_URL = "money-machine.github.io"
+SITE_URL = "freem0380.github.io/benri-tools"
 
 # Image dimensions (Twitter card)
 IMG_W = 1200
