@@ -1,0 +1,161 @@
+{
+  "_README": "各案件のURL設定。アフィリエイトURLが取得できたらurlフィールドを上書きし、python scripts/inject_affiliate_links.py を実行。",
+  "_MOSHIMO_ID": "833667",
+
+  "sbi_securities": {
+    "name": "SBI証券",
+    "asp": "アクセストレード推奨",
+    "search_keyword": "SBI証券",
+    "official_url": "https://www.sbisec.co.jp/",
+    "url": "https://www.sbisec.co.jp/"
+  },
+  "money_doctor": {
+    "name": "マネードクター",
+    "asp": "A8.net / afb",
+    "search_keyword": "マネードクター",
+    "official_url": "https://fp-moneydoctor.com/",
+    "url": "https://fp-moneydoctor.com/"
+  },
+  "wealthnavi": {
+    "name": "WealthNavi",
+    "asp": "もしもアフィリエイト / A8.net",
+    "search_keyword": "ウェルスナビ WealthNavi",
+    "official_url": "https://www.wealthnavi.com/",
+    "url": "https://www.wealthnavi.com/"
+  },
+  "money_forward": {
+    "name": "マネーフォワード クラウド確定申告",
+    "asp": "もしもアフィリエイト / A8.net",
+    "search_keyword": "マネーフォワード",
+    "official_url": "https://biz.moneyforward.com/tax_return/",
+    "url": "https://biz.moneyforward.com/tax_return/"
+  },
+  "zeirishi_dot_com": {
+    "name": "税理士ドットコム",
+    "asp": "A8.net",
+    "search_keyword": "税理士ドットコム",
+    "official_url": "https://www.zeiri4.com/",
+    "url": "https://www.zeiri4.com/"
+  },
+  "lhh_agent": {
+    "name": "LHH転職エージェント",
+    "asp": "A8.net",
+    "search_keyword": "LHH",
+    "official_url": "https://jp.lhh.com/",
+    "url": "https://jp.lhh.com/"
+  },
+  "pitaten": {
+    "name": "ピタテン",
+    "asp": "A8.net",
+    "search_keyword": "ピタテン",
+    "official_url": "https://www.pitaten.jp/",
+    "url": "https://www.pitaten.jp/"
+  },
+  "uzuz": {
+    "name": "UZUZ",
+    "asp": "A8.net",
+    "search_keyword": "UZUZ ウズウズ",
+    "official_url": "https://uzuz.jp/",
+    "url": "https://uzuz.jp/"
+  },
+  "hoken_minaoshi_lab": {
+    "name": "保険見直しラボ",
+    "asp": "A8.net",
+    "search_keyword": "保険見直しラボ",
+    "official_url": "https://www.hoken-minaoshi-lab.jp/",
+    "url": "https://www.hoken-minaoshi-lab.jp/"
+  },
+  "mogecheck": {
+    "name": "モゲチェック",
+    "asp": "TCSアフィリエイト / A8.net",
+    "search_keyword": "モゲチェック",
+    "official_url": "https://mogecheck.jp/",
+    "url": "https://mogecheck.jp/"
+  },
+  "hoken_square_bang": {
+    "name": "保険スクエアbang!",
+    "asp": "A8.net",
+    "search_keyword": "保険スクエアbang",
+    "official_url": "https://www.bang.co.jp/kasai/",
+    "url": "https://www.bang.co.jp/kasai/"
+  },
+  "renosy": {
+    "name": "RENOSY",
+    "asp": "A8.net",
+    "search_keyword": "RENOSY リノシー",
+    "official_url": "https://www.renosy.com/",
+    "url": "https://www.renosy.com/"
+  },
+
+  "sim_povo": {
+    "name": "povo",
+    "official_url": "https://povo.jp/",
+    "url": "https://povo.jp/"
+  },
+  "sim_linemo": {
+    "name": "LINEMO",
+    "official_url": "https://www.linemo.jp/",
+    "url": "https://www.linemo.jp/"
+  },
+  "sim_iijmio": {
+    "name": "IIJmio",
+    "official_url": "https://www.iijmio.jp/",
+    "url": "https://www.iijmio.jp/"
+  },
+  "sim_rakuten": {
+    "name": "楽天モバイル",
+    "official_url": "https://network.mobile.rakuten.co.jp/",
+    "url": "https://network.mobile.rakuten.co.jp/"
+  },
+  "sim_mineo": {
+    "name": "mineo",
+    "official_url": "https://mineo.jp/",
+    "url": "https://mineo.jp/"
+  },
+  "sim_ahamo": {
+    "name": "ahamo",
+    "official_url": "https://ahamo.com/",
+    "url": "https://ahamo.com/"
+  },
+  "sim_uqmobile": {
+    "name": "UQモバイル",
+    "official_url": "https://www.uqwimax.jp/mobile/",
+    "url": "https://www.uqwimax.jp/mobile/"
+  },
+  "sim_ymobile": {
+    "name": "ワイモバイル",
+    "official_url": "https://www.ymobile.jp/",
+    "url": "https://www.ymobile.jp/"
+  },
+  "sim_nuro_mobile": {
+    "name": "NUROモバイル",
+    "official_url": "https://mobile.nuro.jp/",
+    "url": "https://mobile.nuro.jp/"
+  },
+  "sim_biglobe": {
+    "name": "BIGLOBEモバイル",
+    "official_url": "https://join.biglobe.ne.jp/mobile/",
+    "url": "https://join.biglobe.ne.jp/mobile/"
+  },
+  "sim_jcom": {
+    "name": "J:COMモバイル",
+    "official_url": "https://www.jcom.co.jp/service/mobile/",
+    "url": "https://www.jcom.co.jp/service/mobile/"
+  },
+  "sim_libmo": {
+    "name": "LIBMO",
+    "official_url": "https://www.libmo.jp/",
+    "url": "https://www.libmo.jp/"
+  },
+  "sim_nihon_tsushin": {
+    "name": "日本通信SIM",
+    "official_url": "https://www.nihontsushin.com/",
+    "url": "https://www.nihontsushin.com/"
+  },
+  "sim_default": {
+    "name": "格安SIM（デフォルト）",
+    "official_url": "https://kakaku.com/mobile_data/sim/",
+    "url": "https://kakaku.com/mobile_data/sim/",
+    "_note": "個別リンクが無い場合のフォールバック用"
+  }
+}
