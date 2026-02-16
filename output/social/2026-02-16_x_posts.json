@@ -1,82 +1,82 @@
 [
   {
     "slug": "sim-comparison",
-    "text": "📱 格安SIMどれが安い？13社を一覧比較！\n\n月額料金・データ量・通話料をひと目で比較。\nあなたに最適なプランが見つかります。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/sim-comparison/\n\n#格安SIM #節約 #通信費削減 #スマホ料金",
-    "chars": 156
+    "text": "📱 格安SIMどれが安い？13社を一覧比較！\n\n月額料金・データ量・通話料をひと目で比較。\nあなたに最適なプランが見つかります。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/sim-comparison/\n\n#格安SIM #節約 #通信費削減 #スマホ料金",
+    "chars": 159
   },
   {
     "slug": "tax-calculator",
-    "text": "💰 手取り額、正確に計算できてますか？\n\n年収を入力するだけで所得税・住民税・社会保険料を自動計算。\n確定申告の準備にも。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/tax-calculator/\n\n#確定申告 #税金計算 #手取り額 #節税",
-    "chars": 150
+    "text": "💰 手取り額、正確に計算できてますか？\n\n年収を入力するだけで所得税・住民税・社会保険料を自動計算。\n確定申告の準備にも。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/tax-calculator/\n\n#確定申告 #税金計算 #手取り額 #節税",
+    "chars": 153
   },
   {
     "slug": "salary-calculator",
-    "text": "💼 年収から手取りを即計算！\n\n社会保険料・所得税・住民税を自動計算。\n転職時の年収比較にも使えます。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/salary-calculator/\n\n#年収 #手取り #転職 #給料計算",
-    "chars": 140
+    "text": "💼 年収から手取りを即計算！\n\n社会保険料・所得税・住民税を自動計算。\n転職時の年収比較にも使えます。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/salary-calculator/\n\n#年収 #手取り #転職 #給料計算",
+    "chars": 143
   },
   {
     "slug": "loan-calculator",
-    "text": "🏠 住宅ローン、月々いくら返す？\n\n借入額・金利・期間を入力で月々の返済額を即計算。\n繰上返済シミュレーションも。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/loan-calculator/\n\n#住宅ローン #マイホーム #ローン計算 #不動産",
-    "chars": 151
+    "text": "🏠 住宅ローン、月々いくら返す？\n\n借入額・金利・期間を入力で月々の返済額を即計算。\n繰上返済シミュレーションも。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/loan-calculator/\n\n#住宅ローン #マイホーム #ローン計算 #不動産",
+    "chars": 154
   },
   {
     "slug": "investment-return",
-    "text": "📈 投資したらいくら増える？\n\n元本・利回り・期間から将来の資産額をシミュレーション。\nグラフで成長を可視化。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/investment-return/\n\n#投資 #資産運用 #NISA #複利効果",
-    "chars": 147
-  },
-  {
-    "slug": "nisa-simulator",
-    "text": "🏦 新NISAでいくら貯まる？\n\nつみたて投資枠・成長投資枠の非課税メリットを計算。\n将来の資産形成をシミュレーション。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/nisa-simulator/\n\n#新NISA #つみたてNISA #資産形成 #非課税",
-    "chars": 155
-  },
-  {
-    "slug": "insurance-calculator",
-    "text": "🛡️ 必要な保険金額、計算してみませんか？\n\n家族構成・収入から必要保障額を自動計算。\nムダな保険料を見直すきっかけに。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/insurance-calculator/\n\n#生命保険 #保険見直し #必要保障額 #節約",
-    "chars": 157
-  },
-  {
-    "slug": "pension-calculator",
-    "text": "👴 将来もらえる年金額は？\n\n加入期間・平均年収から年金受給額を試算。\n老後の資金計画に。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/pension-calculator/\n\n#年金 #老後資金 #年金計算 #将来設計",
-    "chars": 138
-  },
-  {
-    "slug": "retirement-calculator",
-    "text": "🌴 FIREに必要な金額は？\n\n目標年齢・生活費・投資リターンからFIRE達成に必要な資産を計算。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/retirement-calculator/\n\n#FIRE #早期退職 #経済的自立 #資産運用",
-    "chars": 148
-  },
-  {
-    "slug": "dividend-yield",
-    "text": "💵 配当金で月5万円得るには？\n\n投資額・配当利回りから年間配当金を計算。\n高配当株ポートフォリオの設計に。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/dividend-yield/\n\n#配当金 #高配当株 #不労所得 #投資",
-    "chars": 142
-  },
-  {
-    "slug": "real-estate-yield",
-    "text": "🏢 その不動産、利回りは何%？\n\n物件価格・家賃・経費から表面利回り・実質利回りを計算。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/real-estate-yield/\n\n#不動産投資 #利回り #ワンルーム投資 #資産運用",
-    "chars": 141
-  },
-  {
-    "slug": "unemployment-benefit",
-    "text": "📋 失業手当、いくらもらえる？\n\n勤続年数・年齢・給与から失業給付金額と期間を自動計算。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/unemployment-benefit/\n\n#失業保険 #雇用保険 #失業手当 #転職",
-    "chars": 139
-  },
-  {
-    "slug": "retirement-fund",
-    "text": "🎯 老後資金2000万円、本当に必要？\n\nあなたの状況で必要な老後資金を個別にシミュレーション。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/retirement-fund/\n\n#老後2000万円 #老後資金 #年金 #資産形成",
-    "chars": 142
-  },
-  {
-    "slug": "furusato-tax",
-    "text": "🎁 ふるさと納税、控除上限額いくら？\n\n年収・家族構成を入力するだけで控除上限額を即計算。\nお得にふるさと納税を始めよう。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/furusato-tax/\n\n#ふるさと納税 #控除上限額 #節税 #返礼品",
+    "text": "📈 投資したらいくら増える？\n\n元本・利回り・期間から将来の資産額をシミュレーション。\nグラフで成長を可視化。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/investment-return/\n\n#投資 #資産運用 #NISA #複利効果",
     "chars": 150
   },
   {
-    "slug": "compound-interest",
-    "text": "📊 複利の力、計算してみませんか？\n\n元本・利率・期間を入力で将来の資産額をシミュレーション。\n複利の効果をグラフで実感。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/compound-interest/\n\n#複利 #資産運用 #投資 #積立投資",
+    "slug": "nisa-simulator",
+    "text": "🏦 新NISAでいくら貯まる？\n\nつみたて投資枠・成長投資枠の非課税メリットを計算。\n将来の資産形成をシミュレーション。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/nisa-simulator/\n\n#新NISA #つみたてNISA #資産形成 #非課税",
+    "chars": 158
+  },
+  {
+    "slug": "insurance-calculator",
+    "text": "🛡️ 必要な保険金額、計算してみませんか？\n\n家族構成・収入から必要保障額を自動計算。\nムダな保険料を見直すきっかけに。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/insurance-calculator/\n\n#生命保険 #保険見直し #必要保障額 #節約",
+    "chars": 160
+  },
+  {
+    "slug": "pension-calculator",
+    "text": "👴 将来もらえる年金額は？\n\n加入期間・平均年収から年金受給額を試算。\n老後の資金計画に。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/pension-calculator/\n\n#年金 #老後資金 #年金計算 #将来設計",
+    "chars": 141
+  },
+  {
+    "slug": "retirement-calculator",
+    "text": "🌴 FIREに必要な金額は？\n\n目標年齢・生活費・投資リターンからFIRE達成に必要な資産を計算。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/retirement-calculator/\n\n#FIRE #早期退職 #経済的自立 #資産運用",
     "chars": 151
   },
   {
+    "slug": "dividend-yield",
+    "text": "💵 配当金で月5万円得るには？\n\n投資額・配当利回りから年間配当金を計算。\n高配当株ポートフォリオの設計に。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/dividend-yield/\n\n#配当金 #高配当株 #不労所得 #投資",
+    "chars": 145
+  },
+  {
+    "slug": "real-estate-yield",
+    "text": "🏢 その不動産、利回りは何%？\n\n物件価格・家賃・経費から表面利回り・実質利回りを計算。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/real-estate-yield/\n\n#不動産投資 #利回り #ワンルーム投資 #資産運用",
+    "chars": 144
+  },
+  {
+    "slug": "unemployment-benefit",
+    "text": "📋 失業手当、いくらもらえる？\n\n勤続年数・年齢・給与から失業給付金額と期間を自動計算。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/unemployment-benefit/\n\n#失業保険 #雇用保険 #失業手当 #転職",
+    "chars": 142
+  },
+  {
+    "slug": "retirement-fund",
+    "text": "🎯 老後資金2000万円、本当に必要？\n\nあなたの状況で必要な老後資金を個別にシミュレーション。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/retirement-fund/\n\n#老後2000万円 #老後資金 #年金 #資産形成",
+    "chars": 145
+  },
+  {
+    "slug": "furusato-tax",
+    "text": "🎁 ふるさと納税、控除上限額いくら？\n\n年収・家族構成を入力するだけで控除上限額を即計算。\nお得にふるさと納税を始めよう。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/furusato-tax/\n\n#ふるさと納税 #控除上限額 #節税 #返礼品",
+    "chars": 153
+  },
+  {
+    "slug": "compound-interest",
+    "text": "📊 複利の力、計算してみませんか？\n\n元本・利率・期間を入力で将来の資産額をシミュレーション。\n複利の効果をグラフで実感。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/compound-interest/\n\n#複利 #資産運用 #投資 #積立投資",
+    "chars": 154
+  },
+  {
     "slug": "rent-vs-buy",
-    "text": "🏡 持ち家と賃貸、どっちが得？\n\n物件価格・家賃・期間を入力で総コストを比較。\n住宅購入の判断材料に。\n\n無料で使えます👇\nhttps://freem0380.github.io/benri-tools/rent-vs-buy/\n\n#持ち家vs賃貸 #住宅購入 #マイホーム #家賃",
-    "chars": 141
+    "text": "🏡 持ち家と賃貸、どっちが得？\n\n物件価格・家賃・期間を入力で総コストを比較。\n住宅購入の判断材料に。\n\n無料で使えます👇\nhttps://ai-money-lab.github.io/benri-tools/rent-vs-buy/\n\n#持ち家vs賃貸 #住宅購入 #マイホーム #家賃",
+    "chars": 144
   }
 ]

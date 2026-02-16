@@ -30,11 +30,11 @@ GitHub Pagesに自動デプロイ
 
 ### GitHub Actions（push時 + 毎日21:00 UTC）
 - GitHub Pagesに自動デプロイ
-- サイトURL: https://freem0380.github.io/benri-tools/
+- サイトURL: https://ai-money-lab.github.io/benri-tools/
 
 ### 確認方法
 ```
-ブラウザで https://freem0380.github.io/benri-tools/ を開く
+ブラウザで https://ai-money-lab.github.io/benri-tools/ を開く
 → ツール一覧が表示されればOK
 ```
 

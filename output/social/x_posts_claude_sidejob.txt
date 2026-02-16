@@ -28,7 +28,7 @@ Claude AIに「お金の計算ツール16個作って」と頼んだら
 
 【リプライ】
 全ツール無料で公開してます。
-https://freem0380.github.io/benri-tools/
+https://ai-money-lab.github.io/benri-tools/
 
 ---
 
@@ -48,7 +48,7 @@ https://freem0380.github.io/benri-tools/
 
 【リプライ】
 ツールはこちらです（無料）
-https://freem0380.github.io/benri-tools/tax-calculator/
+https://ai-money-lab.github.io/benri-tools/tax-calculator/
 
 ---
 
@@ -67,7 +67,7 @@ NUROモバイル → 3GB 792円
 
 【リプライ】
 13社の最新料金比較はこちら
-https://freem0380.github.io/benri-tools/sim-comparison/
+https://ai-money-lab.github.io/benri-tools/sim-comparison/
 
 ---
 
@@ -86,7 +86,7 @@ https://freem0380.github.io/benri-tools/sim-comparison/
 
 【リプライ】
 自分の条件で計算できるシミュレーター作りました
-https://freem0380.github.io/benri-tools/nisa-simulator/
+https://ai-money-lab.github.io/benri-tools/nisa-simulator/
 
 ---
 
@@ -106,7 +106,7 @@ https://freem0380.github.io/benri-tools/nisa-simulator/
 
 【リプライ】
 年収と家族構成を入れるだけで上限額がわかります
-https://freem0380.github.io/benri-tools/furusato-tax/
+https://ai-money-lab.github.io/benri-tools/furusato-tax/
 
 ---
 
@@ -133,7 +133,7 @@ AIを使う側と使わない側、差がつくのはこれからです。
 
 【リプライ】
 全ツールはここで公開してます
-https://freem0380.github.io/benri-tools/
+https://ai-money-lab.github.io/benri-tools/
 
 ---
 
@@ -156,7 +156,7 @@ https://freem0380.github.io/benri-tools/
 
 【リプライ】
 自分の条件でシミュレーションできます
-https://freem0380.github.io/benri-tools/rent-vs-buy/
+https://ai-money-lab.github.io/benri-tools/rent-vs-buy/
 
 ---
 
@@ -179,7 +179,7 @@ https://freem0380.github.io/benri-tools/rent-vs-buy/
 
 【リプライ】
 自分の金額・利率で計算できます
-https://freem0380.github.io/benri-tools/compound-interest/
+https://ai-money-lab.github.io/benri-tools/compound-interest/
 
 ---
 
@@ -198,7 +198,7 @@ https://freem0380.github.io/benri-tools/compound-interest/
 
 【リプライ】
 配当シミュレーターで計算してみてください
-https://freem0380.github.io/benri-tools/dividend-yield/
+https://ai-money-lab.github.io/benri-tools/dividend-yield/
 
 ---
 
@@ -228,4 +228,4 @@ Claude AIで作った無料ツール16個の一覧：
 
 【リプライ】
 こちらからどうぞ
-https://freem0380.github.io/benri-tools/
+https://ai-money-lab.github.io/benri-tools/
